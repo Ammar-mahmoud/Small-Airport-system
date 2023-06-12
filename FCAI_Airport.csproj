@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F58CB0B1-86CD-4046-8685-5C7A97F711F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FCAI_Airport</RootNamespace>
+    <AssemblyName>FCAI_Airport</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_aircraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_aircraft.Designer.cs">
+      <DependentUpon>add_aircraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_flight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_flight.Designer.cs">
+      <DependentUpon>add_flight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Airport_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Airport_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Airport_SystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Airport_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="book_flight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book_flight.Designer.cs">
+      <DependentUpon>book_flight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="change_state_aircraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="change_state_aircraft.Designer.cs">
+      <DependentUpon>change_state_aircraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="check_sign_up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="check_sign_up.Designer.cs">
+      <DependentUpon>check_sign_up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_list.Designer.cs">
+      <DependentUpon>customer_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manger_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manger_list.Designer.cs">
+      <DependentUpon>manger_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sign_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign_in.Designer.cs">
+      <DependentUpon>sign_in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign_up_manger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign_up_manger.Designer.cs">
+      <DependentUpon>sign_up_manger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sing_up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sing_up.Designer.cs">
+      <DependentUpon>sing_up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stat.Designer.cs">
+      <DependentUpon>stat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_book.Designer.cs">
+      <DependentUpon>update_book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_data.Designer.cs">
+      <DependentUpon>update_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_flight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_flight.Designer.cs">
+      <DependentUpon>update_flight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_name.Designer.cs">
+      <DependentUpon>update_name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_password.Designer.cs">
+      <DependentUpon>update_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_phone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_phone.Designer.cs">
+      <DependentUpon>update_phone.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_aircraft.resx">
+      <DependentUpon>add_aircraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_flight.resx">
+      <DependentUpon>add_flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="book_flight.resx">
+      <DependentUpon>book_flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="change_state_aircraft.resx">
+      <DependentUpon>change_state_aircraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="check_sign_up.resx">
+      <DependentUpon>check_sign_up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_list.resx">
+      <DependentUpon>customer_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manger_list.resx">
+      <DependentUpon>manger_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sign_in.resx">
+      <DependentUpon>sign_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign_up_manger.resx">
+      <DependentUpon>sign_up_manger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sing_up.resx">
+      <DependentUpon>sing_up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stat.resx">
+      <DependentUpon>stat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_book.resx">
+      <DependentUpon>update_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_data.resx">
+      <DependentUpon>update_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_flight.resx">
+      <DependentUpon>update_flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_name.resx">
+      <DependentUpon>update_name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_password.resx">
+      <DependentUpon>update_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_phone.resx">
+      <DependentUpon>update_phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Airport_SystemDataSet.xsc">
+      <DependentUpon>Airport_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Airport_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Airport_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Airport_SystemDataSet.xss">
+      <DependentUpon>Airport_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Airport_SystemDataSet1.xsc">
+      <DependentUpon>Airport_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Airport_SystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Airport_SystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Airport_SystemDataSet1.xss">
+      <DependentUpon>Airport_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="bin\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\FCAI_Airport.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FCAI_Airport.exe" />
+    <Content Include="bin\Debug\FCAI_Airport.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
